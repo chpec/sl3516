@@ -654,6 +654,15 @@ config RTC_DRV_NUC900
 	  If you say yes here you get support for the RTC subsystem of the
 	  NUC910/NUC920 used in embedded systems.
 
+config RTC_DRV_RTC7301
+	tristate "Epson RTC-7301 SF/DG"
+	help
+	  If you say Y here you will get support for the
+	  Epson RTC-7301 SF/DG RTC chips.
+
+	  This driver can also be built as a module. If so, the module
+	  will be called rtc-7301.
+
 comment "on-CPU RTC drivers"
 
 config RTC_DRV_DAVINCI
@@ -827,6 +836,15 @@ config RTC_DRV_BFIN
 
 	  This driver can also be built as a module. If so, the module
 	  will be called rtc-bfin.
+
+config RTC_DRV_GEMINI
+	tristate "Gemini SoC RTC"
+	help
+	  If you say Y here you will get support for the
+	  RTC found on Gemini SoC's.
+
+	  This driver can also be built as a module. If so, the module
+	  will be called rtc-gemini.
 
 config RTC_DRV_RS5C313
 	tristate "Ricoh RS5C313"
