@@ -20,6 +20,10 @@ ifeq ($(CONFIG_ARCH_SHARK),y)
 OBJS		+= head-shark.o ofw-shark.o
 endif
 
+ifeq ($(CONFIG_MACH_MZKNAS),y)
+OBJS		+= head-mzknas.o
+endif
+
 ifeq ($(CONFIG_ARCH_P720T),y)
 # Borrow this code from SA1100
 OBJS		+= head-sa1100.o

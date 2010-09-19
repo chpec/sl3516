@@ -34,6 +34,11 @@ static struct map_desc gemini_io_desc[] __initdata = {
 		.length		= SZ_512K,
 		.type 		= MT_DEVICE,
 	}, {
+		.virtual	= IO_ADDRESS(GEMINI_SATA_BASE),
+		.pfn		= __phys_to_pfn(GEMINI_SATA_BASE),
+		.length		= SZ_512K,
+		.type 		= MT_DEVICE,
+	}, {
 		.virtual	= IO_ADDRESS(GEMINI_INTERRUPT_BASE),
 		.pfn		= __phys_to_pfn(GEMINI_INTERRUPT_BASE),
 		.length		= SZ_512K,
@@ -56,6 +61,11 @@ static struct map_desc gemini_io_desc[] __initdata = {
 	}, {
 		.virtual	= IO_ADDRESS(GEMINI_GPIO_BASE(2)),
 		.pfn		= __phys_to_pfn(GEMINI_GPIO_BASE(2)),
+		.length		= SZ_512K,
+		.type 		= MT_DEVICE,
+	}, {
+		.virtual	= IO_ADDRESS(GEMINI_PCI_IO_BASE),
+		.pfn		= __phys_to_pfn(GEMINI_PCI_IO_BASE),
 		.length		= SZ_512K,
 		.type 		= MT_DEVICE,
 	}, {
